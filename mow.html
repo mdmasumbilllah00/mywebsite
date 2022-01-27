@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>dom abc element </title>
+	<link rel="stylesheet" href="">
+	<style>
+		html{
+	 		scroll-behavior: smooth;
+	 	}
+		body{
+			background-color: #12d4ff;
+			padding-bottom:500px;
+			padding-top:40px ;
+		}
+		h1{
+			text-align: center;
+			margin: 0px;
+			box-shadow: -5px -5px 5px #4d12ff inset;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 3px 10px;
+			border-radius: 10px;
+			letter-spacing: 3px;
+			font-style: italic;
+			border: 2px solid black;
+			border-bottom: none;
+			color: #000000;
+			background-color:#12d4ff;
+		}
+		p::first-letter {
+			font-size: 200%;
+			font-weight: bold;
+			color:yellow;
+		}
+		.fdiv{
+			margin-right: 100px;
+			border: 2px solid black;
+			padding: 10px;
+			background-color:#34eb95 ;
+			margin-bottom: 100px;
+			box-shadow: 10px 10px 10px ;
+		}
+		h5{
+			background-color: #86d9f7;
+			font-size: 20px;
+			color: ;
+			padding: 5px 15px 5px  15px;
+			width: max-content;
+			border-radius: 10px;
+			box-shadow: 5px -5px 5px  inset;
+		}
+		big{
+			background-color: #34eb95;
+			padding: 5px;
+		}
+		h3{
+			background-color: yellow;
+			padding: 10px;
+			width: 500px;
+		}
+		h4{
+		background-color: lightgray;
+		padding: 10px;
+		border-radius: 10px;
+		font-size: 15px;
+		}
+		.cdnpt{
+			width:50px ;
+			background-color: inherit;
+			border: none;
+			text-align: center;
+		}
+		.cdnpt2{
+			width:50px ;
+			border: none;
+			text-align: center;
+		}
+		pre{
+			margin-left: -200px;
+		}
+		.img1{
+			width: 30%;
+		}
+		.img1:hover{
+			width: 31%;
+			transition-delay: .02s;
+			transition-duration: 1s;
+		}
+		table,th,td{
+			border: 1px solid black;
+		}
+		td{
+			padding:3px 10px;
+		}
+		table{
+			padding: 10px;
+			width: 80%;
+			border-collapse: collapse;
+		}
+		label{
+			background-color: black;
+			color: white;
+			font-size: 25px;
+			padding: 3px 10px;
+			border-radius: 20px;
+
+		}
+		.style1{
+			background-image: linear-gradient(red,yellow,lightslategray);
+		}
+		.style2{
+			font-size: 8px;
+		}
+		.style3{
+			text-transform: uppercase;
+  			text-align: center;
+		}
+		.mainclass{
+			background-color: black;
+			color: white;
+		}
+		#coturvuj{
+			height: 100px;
+			width:200px ;
+			background-color: lightgray;
+			border-radius: 10px;
+			box-shadow: 10px -10px 10px black;
+			margin: 20px;
+		}
+		#cloneNodedis{
+			display: grid;
+			grid-template-columns:auto auto auto auto ;
+			width: 80%;
+		}
+		/* Safari */
+		:-webkit-full-screen {
+			background-color: yellow;
+		}
+
+		/* IE11 syntax */
+		:-ms-fullscreen {
+			background-color: yellow;
+		}
+
+		/* Standard syntax */
+		:fullscreen {
+			background-color: yellow;
+		}
+		input{
+			text-align: center;
+			border-radius: 10px;
+		}
+		#offsetHeightdiv{
+			resize: both;
+			overflow:scroll;
+
+		}
+	 </style>
+	 
+	 <script>
+	 	function neucldfun(){
+	 		    ffffun()
+				var x=document.getElementsByTagName('div');
+				var txt='<option>';
+				for( var i=0;i<x.length;i++){
+					txt= txt+x[i].attributes.getNamedItem("id").value+"<option>";
+				}
+				document.getElementById("clndivid").innerHTML=txt;
+				neucldfun2();
+				clientHeightfun()
+				makegetBoundingClientRectfun()
+				makehasattributesslectid()
+				hasattributessltfun()
+				hasattributesetidrange()
+			}
+	 </script>
+	 <style>
+	 	#shdiv{
+	 		height: 200px;
+	 		width: 300px;
+	 		background-color: #3915ed;
+	 		overflow: auto;
+	 	}
+	 	#shmd{
+	 		height: 600px;
+	 		width: 400px;
+	 		background-color:#8febd7;
+	 		padding: 10px;
+	 		font-size: 24px;
+	 		font-weight: 600;
+
+	 	}
+	 	#sldiv{
+	 		height: 200px;
+	 		width: 300px;
+	 		background-color: #3915ed;
+	 		overflow: auto;
+	 	}
+	 	#slmdiv{
+	 		height: 800px;
+	 		width: 1000px;
+	 		background-color:#8febd7;
+	 		padding: 10px;
+	 		font-size: 24px;
+	 		font-weight: 600;
+	 	}
+	 	.ncls{
+	 		font-size: 24px;
+	 		color:#3452eb;
+	 		background-image: linear-gradient(45deg,gray,yellow,white);
+	 	}
+	 	#linkweb{
+	 		padding: 3px;
+	 		background: linear-gradient(to top,yellow,gray);
+	 		box-shadow: -5px -5px 5px gray inset;
+	 		margin-top: 0px;
+	 		border-bottom: 5px solid red;
+	 		border-bottom-right-radius: 30px;
+	 		border-bottom-left-radius: 10px;
+	 	}
+	 	#fixeddiv{
+	 		position: fixed;
+	 		background-color: whitesmoke;
+	 		height: 50px;
+	 		width: 500px;
+	 		top: 0px;
+	 		right: 0px;
+	 		box-shadow: 10px -10px 10px  black inset,-25px 10px 10px  black inset;
+	 		transition-duration: 2s;
+	 		border-radius: 20px;
+	 		overflow: auto;
+
+	 	}
+	 	#fixeddiv:hover{
+	 		height: 350px;
+	 	}
+	 	#fixul{
+	 		top: 25px;
+	 		position: absolute;
+	 		grid-template-columns: auto auto;
+	 		list-style-type: number;
+	 		display: none;
+	 		padding-left:20px;
+	 		list-style-position: inside;
+
+	 	}
+	 	#fixul a{
+	 		text-decoration: none;
+	 		color: black;
+	 		font-weight: 600;
+
+	 	}
+	 	#fixul li{
+	 		padding: 2px 0px 2px 10px ;
+	 		margin: 1px;
+	 		box-shadow: -3px -3px 2px black inset;
+	 		background-color: yellow;
+	 		color: gray;
+	 		border-radius: 5px;
+	 	}
+
+	 </style>
+</head>
+<body onload="neucldfun()">
+	<div id="fixeddiv"onmouseout="linkfun2()" onmouseover="linkfun()" >
+		<center><h2  id="linkweb">list of this web link</h2></center>
+		<ul id="fixul" ></ul>
+
+
+	 </div>,
+	<script>
+		function linkfun(){
+			var x=document.getElementById("fixeddiv");
+			document.getElementById("fixul").style.display="grid"
+		}
+		function linkfun2(){
+			var x=document.getElementById("fixeddiv");
+			document.getElementById("fixul").style.display="none"
+
+		}
+
+
+		function ffffun(){
+			var x=document.getElementsByClassName("fdiv");
+			var txt="<a><li>";
+			for(var i=0;i<x.length;i++){
+				txt= txt+x[i].getAttribute("id") +" <a><li>";
+
+			}
+			document.getElementById("fixul").innerHTML=txt;
+			ffffunnn()
+		}
+
+		function ffffunnn(){
+			var x=document.getElementById("fixul");
+			var y=x.getElementsByTagName("a");
+			for(var i=0;i<y.length;i++){
+				y[i].innerHTML="#"+y[i].innerHTML
+			}
+			
+			for(var i=0;i<y.length;i++){
+				y[i].setAttribute("href",y[i].innerHTML)
+			}
+			var aa=x.getElementsByTagName("a");
+			for(var i=0;i<y.length;i++){
+				y[i].innerHTML=y[i].innerHTML.slice(1);
+			}
+			
+		}
+	 </script>
+	<div class="fdiv" id="accessKeydiv"><h1><a href="https://www.w3schools.com/jsref/prop_html_accesskey.asp">accessKey</a></h1>
+		<p>The accessKey property sets or returns the accesskey attribute of an element. <br>
+ 
+		The accesskey attribute specifies a shortcut key to activate/focus an element. <br> blew are given a  link test it </p>
+		<h5><big>syntex:- </big>HTMLElementObject.accessKey <br><big>Set the accessKey property: </big> HTMLElementObject.accessKey = character</h5>
+		<table>
+			<tr>
+				<th>Browser</th>
+				<th>Windows</th>
+			</tr>
+			<tr>
+				<td>Internet Explorer</td>
+				<td>[Alt] + accesskey</td>
+			</tr>
+			<tr>
+				<td>Chrome</td>
+				<td>[Alt] + accesskey</td>
+			</tr>
+			<tr>
+				<td>Firefox</td>
+				<td>[Alt] [Shift] + accesskey</td>
+			</tr>
+			<tr>
+				<td>Safari</td>
+				<td>[Alt] + accesskey</td>
+			</tr>
+			<tr>
+				<td>Opera</td>
+				<td>	Opera 15 or newer: [Alt] + accesskey <br>Opera 12.1 or older: [Shift] [Esc] + accesskey</td>
+			</tr>
+		 </table>
+		<script>
+			function accessKeyfun(){
+				var x=document.getElementById("access").accessKey;
+				document.getElementById("accessKeydis").innerHTML=x;
+			}
+		</script><br>
+		<button onclick="accessKeyfun()">accessKey</button>
+		<a  id="access" accesskey="m" href="https://www.fusionbd.com">fusionbd.com</a>
+		<h3 id="accessKeydis"></h3>
+	 </div>
+	<div class="fdiv" id="addEventListenerdiv"><h1><a href="https://www.w3schools.com/jsref/met_element_addeventlistener.asp">addEventListener()</a></h1>
+		<p>The addEventListener() method attaches an event handler to the specified element.</p>
+		<a id="aale1" href="" > this is  aale1 and this is a link</a><br>
+		<p id="aale2" > this is  aale2 and this is a pragraph</p><br>
+		<audio id="aale3" src="C:\tag practice\xxaudio\lokkhi sona.m4a" controls> this is  aale3 and this is audio</audio><br>
+		<input id="aale4" type="text" placeholder="this is aale4 and this is input"><br>
+		<textarea id="aale5" name="" id="" cols="30" rows="10" > this is  aale5 and this is textare</textarea><br><br>
+		<label for="htmleventelement">add event from hear</label>
+		<h5><big>syntex:- </big>element.addEventListener(event, function, useCapture) </h5>
+		<h4>
+			<pre>
+				document.getElementById("<select onclick="addEventListenerfun()" name="efectid" id="efectid">
+					<option value="aale1">link</option>
+					<option value="aale2">pragraph</option>
+					<option value="aale3">audio</option>
+					<option value="aale4">input</option>
+					<option value="aale5">textarea</option>
+				</select>").addEventListener("<select onclick="addEventListenerfun()" name="htmleventelement" id="htmleventelementall">
+			<optgroup label="AnimationEvent">
+				<option value="animationend">animationend</option>
+				<option value="animationiteration">animationiteration</option>
+				<option value="animationstart">animationstart</option>
+				<option value="transitionend">transitionend</option>
+			</optgroup>
+			<optgroup label="Event">
+				<option value="beforeunload">beforeunload</option>
+				<option value="canplay">canplay</option>
+				<option value="change">change</option>
+				<option value="durationchange">durationchange</option>
+				<option value="error">error</option>
+				<option value="input">input</option>
+				<option value="input">data</option>
+				<option value="invalid">invalid</option>
+				<option value="load">load</option>
+				<option value="loadeddata">loadeddata</option>
+				<option value="loadedmetadata">loadedmetadata</option>
+				<option value="loadstart">loadstart</option>
+				<option value="message">message</option>
+				<option value="resize">resize</option>
+				<option value="open">open</option>
+				<option value="play">play</option>
+				<option value="playing">playing</option>
+				<option value="progress">progress</option>
+				<option value="ratechange">ratechange</option>
+				<option value="reset">reset</option>
+				<option value="scroll">scroll</option>
+				<option value="search">search</option>
+				<option value="seeked">seeked</option>
+				<option value="seeking">seeking</option>
+				<option value="select">select</option>
+				<option value="submit">submit</option>
+				<option value="timeupdate">timeupdate</option>
+				<option value="toggle">toggle</option>
+				<option value="volumechange">volumechange</option>
+			</optgroup>
+			<optgroup label="FocusEvent">
+				<option value="blur">blur</option>
+				<option value="ended">ended</option>
+			</optgroup>
+			<optgroup label="MouseEvent">
+				<option value="click">click</option>
+				<option value="contextmenu">contextmenu</option>
+				<option value="dblclick">dblclick</option>
+				<option value="mousedown">mousedown</option>
+				<option value="mouseenter">mouseenter</option>
+				<option value="mouseleave">mouseleave</option>
+				<option value="mousemove">mousemove</option>
+				<option value="mouseover">mouseover</option>
+				<option value="mouseup">mouseup</option>
+				<option value="altKey">altKey</option>
+				<option value="ctrlKey">ctrlKey</option>
+				<option value="button">button</option>
+				<option value="buttons">buttons</option>
+				<option value="clientX">clientX</option>
+				<option value="clientY">clientY</option>
+			</optgroup>
+			<optgroup label="ClipboardEvent">
+				<option value="copy">copy</option>
+				<option value="cut">cut</option>
+				<option value="paste">paste</option>
+			</optgroup>
+			<optgroup label="DragEvent">
+				<option value="drag">drag</option>
+				<option value="dragend">dragend</option>
+				<option value="dragenter">dragenter</option>
+				<option value="dragleave">dragleave</option>
+				<option value="dragover">dragover</option>
+				<option value="dragstart">dragstart</option>
+				<option value="drop">drop</option>
+			 </optgroup>
+			<optgroup label="FocusEvent">
+				<option value="focus">focus</option>
+				<option value="focusin">focusin</option>
+				<option value="focusout">focusout</option>
+			</optgroup>
+			<optgroup label="KeyboardEvent">
+				<option value="keydown">keydown</option>
+				<option value="keypress">keypress</option>
+				<option value="keyup">keyup</option>
+				<option value="charCode">charCode</option>
+				<option value="code">code</option>
+			</optgroup>
+			<optgroup label="TouchEvent">
+				<option value="touchcancel">touchcancel</option>
+				<option value="touchend">touchend</option>
+				<option value="touchmove">touchmove</option>
+				<option value="touchstart">touchstart</option>
+				<option value="clientX">clientX</option>
+				<option value="clientY">clientY</option>
+			</optgroup>
+
+		 </select>", myfunction);
+		 <br>
+			 function myfunction(){
+				var x=document.getElementById("<select onclick="addEventListenerfun()" name="efectid2" id="efectid2">
+					<option value="aale1">link</option>
+					<option value="aale2">pragraph</option>
+					<option value="aale3">audio</option>
+					<option value="aale4">input</option>
+					<option value="aale5">textarea</option>
+				</select>");
+				x.style.backgroundColor="yellow";
+				};
+			</pre>
+		</h4>
+		<script>
+			function addEventListenerfun(){
+				var xxx=document.getElementById("htmleventelementall").value;
+				var xx=document.getElementById("efectid").value;
+				var xyx=document.getElementById("efectid").value;
+				document.getElementById(xx).addEventListener(xxx, myfunction);
+			}
+			
+			
+			function myfunction(){
+				var x=document.getElementById("efectid2").value;
+				var xx=document.getElementById(x);
+				xx.style.backgroundColor="yellow"
+			}
+		</script>
+		<button onclick="addEventListenerfun()">addEventListener()</button>
+		<h3 id="dis"></h3>
+	 </div>
+	<div class="fdiv" id="appendChilddiv"><h1><a href="https://www.w3schools.com/jsref/met_node_appendchild.asp">appendChild()</a></h1>
+		<p>The appendChild() method appends a node as the last child of a node. <br><br>Tip: If you want to create a new paragraph, with text, remember to create the text as a Text node which you append to the paragraph, then append the paragraph to the document.
+			<br>
+			<xmp>
+			var node = document.createElement("LI");                 // Create a <li> node
+			var textnode = document.createTextNode("Water");         // Create a text node
+			node.appendChild(textnode);                              // Append the text to <li>
+			document.getElementById("myList").appendChild(node);     // Append <li> to <ul> with id="myList"
+			</xmp>
+		</p>
+		<h5><big>syntex:- </big> node.appendChild(node)</h5>
+		<script>
+			function appendChildfun(){
+				var x=document.getElementById("nenpt").value;
+				var xx=document.getElementById("ntnpt").value;
+				var xxx=document.getElementById("midnpt").value;
+
+				var nd=document.createElement(x);
+				var nt=document.createTextNode(xx);
+				nd.appendChild(nt);
+				var id=document.getElementById(xxx);
+				id.appendChild(nd);
+			}
+			function appendChildmovefun(){
+				var nd=document.getElementById("appcul").lastChild;
+				var id=document.getElementById("appcul2");
+				id.appendChild(nd);
+			}
+		</script>
+		<br>
+		<ol id="appcul">
+			<li>masum</li>
+			<li>mahabur</li>
+		</ol>
+		<h4>
+			<pre>
+				function appendChildfun(){
+					var nd=document.createElement("<input type="text" class="cdnpt" value="li" id="nenpt">");
+					var nt=document.createTextNode("<input type="text" class="cdnpt" value="rabeya" id="ntnpt">");
+					nd.appendChild(nt);
+					var id=document.getElementById("<input type="text" class="cdnpt" value="appcul" id="midnpt">");
+					id.appendChild(nd);
+				}
+			</pre>
+		</h4>
+		<button onclick="appendChildfun()">appendChild()</button>
+		<p>Move a list item from one list to another:</p>
+		<h4>
+			<pre>
+				function appendChildmovefun(){
+					var nd=document.getElementById("appcul").lastChild;
+					var id=document.getElementById("appcul2");
+					id.appendChild(nd);
+				}
+			</pre>
+		</h4>
+		<ol id="appcul2">
+			<li>lamia</li>
+			<li>mim</li>
+			<li>jim</li>
+		</ol>
+		<button onclick="appendChildmovefun()">move above list to this list</button>
+		<h3 id="appendChilddis"></h3>
+	 	<button onclick="get()">get id name </button>
+
+	 </div>
+	 <div id="mm">
+	 	<script>
+	 		function get(){
+	 			var txt="";
+	 			var x=document.getElementsByTagName('div');
+	 			for(var i=0;i<x.length;i++){
+	 				txt= txt+x[i].attributes.getNamedItem("id").value+"<br>";
+	 			}
+	 			document.getElementById("appendChilddiv").innerHTML=document.getElementById("appendChilddiv").innerHTML+"<br>"+txt;
+	 		}
+	 	</script>
+	 </div>
+	<div class="fdiv" id="attributesdiv"><h1><a href="https://www.w3schools.com/jsref/prop_node_attributes.asp">attributes </a></h1>
+		<p>The attributes property returns a collection of the specified node's attributes, as a NamedNodeMap object.</p>
+		<h5><big>syntex:- </big> node.attributes</h5>
+		<h4>
+			<pre>
+				function attributesfun(){
+					var x=document.getElementsByTagName('<input oninput="attributesfun()" class="cdnpt" id="attagname" value="div" type="text">')[<input oninput="attributesfun()" class="cdnpt" value="0" id="attagnum" type="number">];
+					var y="";
+					for(var i=0;i\<\x.attributes.length;i++){
+						y=y+x.attributes[i].name +" = "+ x.attributes[i].value+"\<\br>"
+					}
+					document.getElementById("attributesdis").innerHTML=y;
+				}
+			</pre>
+		</h4>
+		<script>
+			function attributesfun(){
+				var xx=document.getElementById("attagname").value;
+				var xxx=document.getElementById("attagnum").value;
+
+
+				var a=document.getElementsByTagName(xx);
+
+				var ca=document.createAttribute("max");
+				ca.value=a.length;
+				document.getElementById("attagnum").setAttributeNode(ca)
+				var x=a[xxx];
+				x.style.backgroundColor="yellowgreen";
+				var y="";
+				for(var i=0;i<x.attributes.length;i++){
+					y=y+x.attributes[i].name +" = "+ x.attributes[i].value+"<br>"
+				}
+				document.getElementById("attributesdis").innerHTML=y;
+			}
+		</script>
+		<button onclick="attributesfun()">attributes</button>
+		<h3 id="attributesdis"></h3>
+	 </div>
+	<div class="fdiv" id="childElementCountdiv"><h1><a href="https://www.w3schools.com/jsref/prop_element_childelementcount.asp">childElementCount </a></h1>
+		<p>The childElementCount property returns the number of child elements an element has.</p>
+		<h5><big>syntex:- </big> node.childElementCount</h5>
+		<h4>
+			<pre>
+				function childcountfun2(){
+					var x=document.getElementsByTagName('<input type="text" value="div" class="cdnpt"id="mmm">')[<input type="number" value="0" class="cdnpt"id="cetagnum">].childElementCount;
+					document.getElementById("childElementCountdis").innerHTML=x;
+				}
+			</pre>
+		</h4>
+		<script>
+			function childElementCountfun(){
+				var x=document.body.childElementCount;
+				document.getElementById("childElementCountdis").innerHTML=x;
+			}
+			function childcountfun2(){
+				var m=document.getElementById("mmm").value;
+				var xxxx=document.getElementById("cetagnum").value;
+				var x=document.getElementsByTagName(m)[xxxx].childElementCount;
+				document.getElementById("childElementCountdis").innerHTML=x;
+			}
+		</script>
+		<button onclick="childElementCountfun()">childElementCount of body </button>
+		<button onclick="childcountfun2()">childElementcount of element</button>
+		<h3 id="childElementCountdis"></h3>
+	 </div>
+	<div class="fdiv" id="childNodesdiv"><h1><a href="https://www.w3schools.com/jsref/prop_node_childnodes.asp">childNodes </a></h1>
+		<p>The childNodes property returns a collection of a node's child nodes, as a NodeList object.
+
+		The nodes in the collection are sorted as they appear in the source code and can be accessed by index numbers. The index starts at 0.</p>
+		<h5><big>syntex:- </big> element.childNodes</h5>
+		<script>
+			function childNodesfun(){
+				var c=document.body.childNodes;
+				var txt="";
+				var i;
+				for(i=0;i<c.length;i++){
+					txt=txt+c[i].nodeName+"<br>";
+				}
+
+				document.getElementById("childNodesdis").innerHTML=txt +"childNodes.length= "+c.length;
+			}
+		</script>
+		<button onclick="childNodesfun()">childNodes  of body</button>
+		<h3 id="childNodesdis"></h3>
+	 </div>
+	<div class="fdiv" id="childrendiv"><h1><a href="https://www.w3schools.com/jsref/prop_element_children.asp">children</a></h1>
+		<p>The children property returns a collection of an element's child elements, as an HTMLCollection object. <br></p>
+		<h5><big>syntex:- </big> element.children</h5>
+		<h4>
+			<pre>
+				function childrenclrfun(){
+					var x=document.getElementById("<select onchange="alertfun()" id="clndivid"></select>").children;
+					var txt="";
+					var t;
+					for(i=0;i<\x.length;i++){
+						txt=txt+x[i].tagName+" "+x[i].attributes.length+"<\br>"
+					}
+					document.getElementById("childrendis").innerHTML = txt;
+				}
+			</pre>
+		</h4>
+		<script>
+			
+			function neucldfun2(){
+				var x=document.getElementsByTagName('div');
+				var txt='<option>';
+				for( var i=0;i<x.length;i++){
+					txt= txt+x[i].attributes.getNamedItem("id").value+"<option>";
+				}
+				document.getElementById("classid").innerHTML=txt;
+			}
+			function childrenfun(){
+				var c = document.body.children;
+				var txt = "";
+				var i;
+				for (i = 0; i < c.length; i++) {
+					txt = txt + c[i].tagName + "<br>";
+				}
+				document.getElementById("childrendis").innerHTML = txt;
+			}
+
+			function childrenclrfun(){
+				var a=document.getElementById("clndivid").value;
+				var x=document.getElementById(a).children;
+				var txt="";
+				var t;
+				for(i=0;i<x.length;i++){
+					txt=txt+x[i].tagName+" "+x[i].attributes.length+"<br>"
+				}
+				document.getElementById("childrendis").innerHTML = txt;
+			}
+		</script>
+		<button onclick="childrenfun()">children of body</button>
+		<button onclick="childrenclrfun()">children of apesific div</button>
+		<h3 id="childrendis"></h3>
+	 </div>
+	<div class="fdiv" id="classListdiv"><h1><a href="https://www.w3schools.com/jsref/prop_element_classlist.asp">classList</a></h1>
+		<p>The classList property returns the class name(s) of an element, as a DOMTokenList object. <br>This property is useful to add, remove and toggle CSS classes on an element. <br>The classList property is read-only, however, you can modify it by using the add() and remove() methods.</p>
+		<h5><big>syntex:- </big> element.classList</h5>
+		<h4>
+			<pre>
+				function classListfun(){
+					var x=document.getElementById("<select id="classid"></select>");
+					x.classList.add("style1","style2","style3");
+				}
+			</pre>
+		</h4>
+		<script>
+			function classListfun(){
+				var a=document.getElementById("classid").value;
+				var x=document.getElementById(a);
+				x.classList.add("style1","style2","style3");
+			}
+			function classListtogglefun(){
+				var a=document.getElementById("classid").value;
+				var x=document.getElementById(a);
+				x.classList.toggle("style3");
+			}
+			function classListlengthfun(){
+				var a=document.getElementById("classid").value;
+				var x=document.getElementById(a);
+				var y=x.classList.length;
+				document.getElementById("classListdis").innerHTML=a+" this id class length ="+y;
+			}
+			function classListitemfun(){
+				var a=document.getElementById("classid").value;
+				var x=document.getElementById(a);
+				var num=document.getElementById("classlistitemname").value;
+				var y=x.classList.item(num);
+				document.getElementById("classListdis").innerHTML=a+" this id classlist "+num+1+" item  ="+y;
+			}
+			function classListcontainsfun(){
+				var a=document.getElementById("classid").value;
+				var x=document.getElementById(a);
+				var y=x.classList.contains("fdiv");
+				document.getElementById("classListdis").innerHTML=a+" this id classlist contains ('fdiv') = " + y
+			}
+		</script>
+		<button onclick="classListfun()">classList.add</button>
+		<button onclick="classListtogglefun()">classList.toggle</button>
+		<button onclick="classListlengthfun()">classList.length</button>
+		<button onclick="classListitemfun()">classList.item(<input class="cdnpt"type="number" id="classlistitemname">)</button>
+		<button onclick="classListcontainsfun()">classList.contains</button>
+		<h3 id="classListdis"></h3>
+	 </div>
+	<div class="fdiv" id="clientHeightdiv"><h1><a href="https://www.w3schools.com/jsref/prop_element_clientheight.asp">clientHeight</a></h1>
+		<p>The clientHeight property returns the viewable height of an element in pixels, including padding, but not the border, scrollbar or margin. he reason why the "viewable" word is specified, is because if the element's content is taller than the actual height of the element, this property will only return the height that is visible (See "More Examples").<br></p>
+		<h5><big>syntex:- </big> element.clientHeight</h5>
+		<textarea name="clientHeighttxt" onclick="resizefun()" id="clientHeighttxt" cols="35" rows="15"></textarea><br>
+		<script>
+			function resizefun(){
+				clientHeightfun()
+			}
+			function clientHeightfun(){
+				var element=document.getElementById("clientHeighttxt");
+				var x=element.clientHeight;
+				var y=element.clientWidth;
+				var z=document.getElementById("clientHeightdis");
+				z.innerHTML="height of this id = "+x+"px"+"<br> width of this id is = "+y+"px"
+			}
+		</script>
+		<button onclick="clientHeightfun()">clientHeight</button>
+		<h3 id="clientHeightdis"></h3>
+
+	 </div>
+	<div class="fdiv" id="cloneNodediv"><h1><a href="https://www.w3schools.com/jsref/met_node_clonenode.asp">cloneNode()</a></h1>
+
+		<p>The cloneNode() method creates a copy of a node, and returns the clone. <br>The cloneNode() method clones all attributes and their values.</p>
+		<h5><big>syntex:- </big> node.cloneNode(deep)</h5>
+		<h4>
+			<pre>
+				function cloneNodefun(){
+					var itm=document.getElementById("coturvuj");
+					var cln = itm.cloneNode(true);
+					document.getElementById("cloneNodedis").appendChild(cln);
+				}
+			</pre>
+		</h4>
+		<script>
+			function cloneNodefun(){
+				var itm=document.getElementById("coturvuj");
+				var cln = itm.cloneNode(true);
+				document.getElementById("cloneNodedis").appendChild(cln);
+			}
+		</script>
+		<button onclick="cloneNodefun()">cloneNode()</button>
+		<h3 id="cloneNodedis"></h3>
+		<div id="coturvuj"></div>
+	 </div>
+	<div class="fdiv" id="containsdiv"><h1><a href="https://www.w3schools.com/jsref/met_node_contains.asp">contains()</a></h1>
+		<p>The contains() method returns a Boolean value indicating whether a node is a descendant of a specified node. <br>A descendant can be a child, grandchild, great-grandchild, and so on.</p>
+		<h5><big>syntex:- </big> node.contains(node) </h5>
+		<h4>
+			<pre>
+				function containsfun(){
+					var x=document.getElementById("containsdis");
+					var div=document.getElementById("containsdiv").contains(x);
+					document.getElementById("containsdis").innerHTML=div;
+				}
+			</pre>
+		</h4>
+		<script>
+			function containsfun(){
+				var x=document.getElementById("containsdis");
+				var div=document.getElementById("containsdiv").contains(x);
+				document.getElementById("containsdis").innerHTML=div;
+			}
+		</script>
+		<button onclick="containsfun()">contains()</button>
+		<h3 id="containsdis"></h3>
+	 </div>
+	<div class="fdiv" id="contentEditablediv"><h1><a href="https://www.w3schools.com/jsref/prop_html_contenteditable.asp">contentEditable </a></h1>
+		<p id="myP"contenteditable="true">he contentEditable property sets or returns whether the content of an element is editable or not.</p>
+		<h5><big>syntex:- </big> HTMLElementObject.contentEditable = true|false</h5>
+		<h4>
+			<pre>
+				function contentEditablefun(){
+					document.getElementById("myP").contentEditable = true;
+					document.getElementById("contentEditabledis").innerHTML = "The p element above is now editable. Try to change its text.";
+				}
+			</pre>
+		</h4>
+		<script>
+			function contentEditablefun(){
+				 document.getElementById("myP").contentEditable = true;
+				 document.getElementById("contentEditabledis").innerHTML = "The p element above is now editable. Try to change its text.";
+			}
+			function contentEditabletogglefun(button){
+				var x=document.getElementById("myP");
+				if(x.contentEditable=="true"){
+					x.contentEditable = "false";
+					button.innerHTML = "Enable content of p to be editable!";
+				}
+				else{
+					x.contentEditable == "true";
+					button.innerHTML = "Disable content of p to be editable!";
+				}
+			}
+		</script>
+		<button onclick="contentEditablefun()">contentEditable </button>
+		<button onclick="contentEditabletogglefun(this)">contentEditable toggle</button>
+		<h3 id="contentEditabledis"></h3>
+	 </div>
+	<div class="fdiv" id="exitFullscreendiv"><h1><a href="https://www.w3schools.com/jsref/met_element_exitfullscreen.asp">exitFullscreen</a></h1>
+		<p>The exitFullscreen() method cancels an element in fullscreen mode.</p>
+		<h5><big>syntex:- </big>HTMLElementObject.exitFullscreen()</h5>
+		<script>
+			var x=document.documentElement;
+			function openFullscreen(){
+				if(x.requestFullscreen){
+					x.requestFullscreen();
+				}
+				else if(x.webkitRequestFullscreen){
+					x.webkitRequestFullscreen;
+				}
+				else if(x.msRequestFullscreen){
+					x.msRequestFullscreen;
+				}
+			}
+			function closeFullscreen(){
+				if(document.exitFullscreen){
+					document.exitFullscreen();
+				}
+				else if(document.webkitExitFullscreen){ /* Safari */
+					document.webkitExitFullscreen;
+				}
+				else if(document.msExitFullscreen){/* IE11 */
+					document.msExitFullscreen;
+				}
+			}
+		</script>
+		<button onclick="openFullscreen();">Open Fullscreen</button>
+		<button onclick="closeFullscreen();">Close Fullscreen</button>
+		<h3 id="exitFullscreendis"></h3>
+	 </div>
+	<div class="fdiv" id="firstChilddiv"><h1><a href="https://www.w3schools.com/jsref/prop_node_firstchild.asp">firstChild </a></h1>
+		<p>The firstChild property returns the first child node of the specified node, as a Node object.</p>
+		<h5><big>syntex:- </big>node.firstChild</h5>
+		<script>
+			function firstChildfun(){
+				var x=document.getElementById("firstChilddiv").firstChild.tagName;
+				document.getElementById("firstChilddis").innerHTML=x;
+			}
+		</script>
+		<button onclick="firstChildfun()">firstChild</button>
+		<h3 id="firstChilddis"></h3>
+	 </div>
+	<div class="fdiv" id="firstElementChilddiv"><h1><a href="https://www.w3schools.com/jsref/prop_element_firstelementchild.asp">firstElementChild</a></h1>
+		<p>The firstElementChild property returns the first child element of the specified element.</p>
+		<h5><big>syntex:- </big>element.firstElementChild</h5>
+		<script>
+
+			function firstElementChildfun(){
+				var x=document.getElementById("firstElementChilddiv").firstElementChild;
+				var y=x.tagName;
+				var z=x.innerHTML;
+				var a=x.txt;
+				document.getElementById("firstElementChilddis").innerHTML=" the tag nam of firstChild is ="+y+"<br> innerHTML of this div is = "+z+"<br> this divs text is ="+a;
+
+			}
+		</script>
+		<button onclick="firstElementChildfun()">firstElementChild.innerHTML</button>
+	
+		<h3 id="firstElementChilddis"></h3>
+	 </div>
+	<div class="fdiv" id="getAttributediv"><h1><a href="https://www.w3schools.com/jsref/met_element_getattribute.asp">getAttribute()</a></h1>
+		<p>The getAttribute() method returns the value of the attribute with the specified name, of an element.</p>
+		<h5><big>syntex:- </big>element.getAttribute(attributename)</h5>
+		<h4>
+			<pre>
+				function getAttributefun(){
+				var x =document.getElementsByTagName("<input type="text" class="cdnpt" value="div" id="getAttributenpttagname">");
+				var txt="";
+				for(var i=0;i\<\x.length;i++){
+					txt=txt+x[i].getAttribute("<input type="text" class="cdnpt" value="id" id="getAttributenptattriname">")+"\\<\br>"
+				}
+				document.getElementById("getAttributedis").innerHTML=txt;
+			}
+			</pre>
+		</h4>
+		<script>
+			function getAttributefun(){
+				var a=document.getElementById('getAttributenpttagname').value;
+				var b=document.getElementById('getAttributenptattriname').value;
+
+				var x =document.getElementsByTagName(a);
+				var txt="";
+				for(var i=0;i<x.length;i++){
+					txt=txt+x[i].getAttribute(b)+"<br>"
+				}
+				document.getElementById("getAttributedis").innerHTML=txt;
+			}
+		</script>
+		<button onclick="getAttributefun()">getAttribute()</button>
+		<h3 id="getAttributedis"></h3>
+	 </div>
+	<div class="fdiv" id="getAttributeNodediv"><h1><a href="https://www.w3schools.com/jsref/met_element_getattributenode.asp">getAttributeNode()</a></h1>
+		<p>The getAttributeNode() method returns the attribute node with the specified name of an element, as an Attr object.</p>
+		<h5><big>syntex:- </big>element.getAttributeNode(attributename)</h5>
+		<script>
+			function getAttributeNodefun(){
+				
+
+				var x =document.getElementsByTagName("div");
+				var txt="";
+				for(var i=0;i<x.length;i++){
+					txt=txt+x[i].getAttributeNode("id").value+"<br>"
+				}
+				document.getElementById("getAttributeNodedis").innerHTML=txt;
+			}
+		</script>
+		<button onclick="getAttributeNodefun()">getAttributeNode()</button>
+		<h3 id="getAttributeNodedis"></h3>
+	 </div>
+	<div class="fdiv" id="getBoundingClientRectdiv"><h1><a href="https://www.w3schools.com/jsref/met_element_getboundingclientrect.asp">getBoundingClientRect</a></h1>
+		<p>The getBoundingClientRect() method returns the size of an element and its position relative to the viewport. <br></p>
+		<h5><big>syntex:- </big>element.getBoundingClientRect()</h5>
+		<h4>
+			<pre>
+				function getBoundingClientRectfun(){
+					var div=document.getElementById("<select name="getboundingclientrectslt" id="getboundingclientrectslt"></select>");
+					var ans=div.getBoundingClientRect();
+					x = ans.left +"<\br>";
+					y = ans.top +"<\br>";
+					w = ans.width +"<\br>";
+					h = ans.height +"<\br>"; +"<br>"
+					document.getElementById("getBoundingClientRectdis").innerHTML="left ="+x+"top ="+y+"width ="+w+"height ="+h
+				}
+			</pre>
+		</h4>
+		<script>
+			function makegetBoundingClientRectfun(){
+				var x=document.getElementsByTagName('div');
+				var txt='<option>';
+				for( var i=0;i<x.length;i++){
+					txt= txt+x[i].getAttribute("id")+"<option>";
+				}
+				
+
+					document.getElementById("getboundingclientrectslt").innerHTML=txt;
+				}
+				
+			
+			function getBoundingClientRectfun(){
+				var a=document.getElementById("getboundingclientrectslt").value;
+				var div=document.getElementById(a);
+				var ans=div.getBoundingClientRect();
+				x = ans.left +"<br>";
+				y = ans.top +"<br>";
+				w = ans.width +"<br>";
+				h = ans.height +"<br>"; +"<br>"
+				document.getElementById("getBoundingClientRectdis").innerHTML="left ="+x+"top ="+y+"width ="+w+"height ="+h
+			}
+		</script>
+		<button onclick="getBoundingClientRectfun()">getBoundingClientRect</button>
+		<h3 id="getBoundingClientRectdis"></h3>
+	 </div>
+	<div class="fdiv" id="hasAttributediv"><h1><a href="https://www.w3schools.com/jsref/met_element_hasattribute.asp">hasAttribut()</a></h1>
+		<p>The hasAttribute() method returns true if the specified attribute exists, otherwise it returns false.</p>
+		<h5><big>syntex:- </big>element.hasAttribute(attributename)</h5>
+		<h4>
+			<pre>
+				function hasAttributefun(){
+					var x=document.getElementById("<select name="hasAttributeslt" id="hasAttributeslt"></select>");
+					var y=x.hasAttribute("<select name="hassttributesatriselect" id="hassttributesatriselect"><option value="id">id</option><option value="class">class</option><option value="onclick">onclick</option></select>");
+					document.getElementById("hasAttributedis").innerHTML=y;
+
+				}
+			</pre>
+		</h4>
+		<script>
+			function makehasattributesslectid(){
+				var x=document.getElementsByTagName('div');
+				var txt="<option>";
+				for(var i=0;i<x.length;i++){
+					txt=txt+x[i].getAttribute("id")+"<option>";
+
+					
+				}
+				
+
+				document.getElementById("hasAttributeslt").innerHTML=txt;
+				document.getElementById("insertAdjacentElementslt1").innerHTML=txt;
+				document.getElementById("insertAdjacentElementslt2").innerHTML=txt;
+			}
+			function hasAttributefun(){
+				var a=document.getElementById("hasAttributeslt").value;
+				var x=document.getElementById("hasAttributediv");
+				var b=document.getElementById("hassttributesatriselect").value;
+				var y=x.hasAttribute(b);
+				document.getElementById("hasAttributedis").innerHTML=y;
+
+			}
+		</script>
+		<button onclick="hasAttributefun()">hasAttribut()</button>
+		<h3 id="hasAttributedis"><pre>
+			function myFunction() {
+				var x = document.getElementById("myAnchor");
+
+				if (x.hasAttribute("target")) {
+					x.setAttribute("target", "_self");
+				}
+			}
+			</pre>
+		</h3>
+	 </div>
+	<div class="fdiv" id="hasAttributesdiv"><h1><a href="https://www.w3schools.com/jsref/met_node_hasattributes.asp">hasAttributes()</a></h1>
+		<p>The hasAttributes() method returns true if the specified node has any attributes, otherwise false.</p>
+		<h5><big>syntex:- </big>node.hasAttributes()</h5>
+		<h4>
+			<pre>
+				function hasAttributesfun(){
+					var x=document.getElementById('<select onchange="serhasattributesmaxvalfun()" name="hasattributessltidname" id="hasattributessltidname"></select>');
+					z=x.getElementsByTagName("*")[<input type="range" id="hasattriidnumber" max="20" oninput="checkfun()"> <input type="numbr" style="width:30px;"id="attributesvalue">]
+					var ans=z.hasAttributes();
+					document.getElementById("hasAttributesdis").innerHTML=ans;
+				}
+			</pre>
+		</h4>
+		<script>
+			function checkfun(){
+				var x=document.getElementById('hasattriidnumber').value;
+			}
+			function hasattributessltfun(){
+				var x=document.getElementsByTagName('*');
+				var txt="<option>"
+				for(var i=0;i<x.length;i++){
+					if(x[i].id==""){
+						continue
+					}
+					txt=txt+x[i].getAttribute("id")+"<option>"
+				}
+				document.getElementById("hasattributessltidname").innerHTML=txt;
+				document.getElementById("insertAdjacentHTMLslt").innerHTML=txt;
+				document.getElementById("insertAdjacentTextslt").innerHTML=txt;
+				document.getElementById("insertbeforsletidnaem").innerHTML=txt;
+				document.getElementById("offsetHeightslt").innerHTML=txt;
+				document.getElementById("parentNodeslt").innerHTML=txt;
+				document.getElementById("querySelectorAllslt").innerHTML=txt;
+				document.getElementById("removeslt").innerHTML=txt;
+				document.getElementById("removeAttributeslt1").innerHTML=txt;
+				document.getElementById("removeChildslt").innerHTML=txt;
+				document.getElementById("setAttributedisslt").innerHTML=txt;
+				document.getElementById("setAttributeNodedisslt").innerHTML=txt;
+
+
+			}
+			function serhasattributesmaxvalfun(){
+				var x=document.getElementById("hasattributessltidname").value;
+				var y=document.getElementById(x);
+				var z=y.getElementsByTagName("*").length;
+				var ca=document.createAttribute("max");
+				ca.value=z;
+				var ans=document.getElementById("hasattriidnumber");
+				ans.setAttributeNode(ca);
+				document.getElementById("attributesvalue").value=z;
+
+			}
+			
+			function hasAttributesfun(){
+				var a=document.getElementById("hasattributessltidname").value;
+				var b=document.getElementById("hasattriidnumber").value;
+
+
+				var x=document.getElementById(a);
+				var z=x.getElementsByTagName("*")[b];
+				var ans=z.hasAttributes();
+				document.getElementById("hasAttributesdis").innerHTML=ans;
+			}
+		</script>
+		<button onclick="hasAttributesfun()">hasAttributes()</button>
+		<h3 id="hasAttributesdis"></h3>
+	 </div>
+	<div class="fdiv" id="hasChildNodesdiv"><h1><a href="https://www.w3schools.com/jsref/met_node_haschildnodes.asp">hasChildNodes()</a></h1>
+		<p>The hasChildNodes() method returns true if the specified node has any child nodes, otherwise false.</p>
+		<h5><big>syntex:- </big>node.hasChildNodes()</h5>
+		<ul id="myList"><li>Coffee</li><li>Tea</li><li>Coffee</li><li>Tea</li></ul>
+		<h4><pre>
+			function hasChildNodesfun(){
+				var list = document.getElementById("myList");
+
+				if (list.hasChildNodes()) {
+					list.removeChild(list.childNodes[0]);
+				}
+			}
+		</pre></h4>
+		<script>
+			function hasChildNodesfun(){
+				var list = document.getElementById("myList");
+
+				if (list.hasChildNodes()) {
+					list.removeChild(list.childNodes[0]);
+				}
+				
+			}
+		</script>
+		<button onclick="hasChildNodesfun()">hasChildNodes()</button>
+		<h3 id="hasChildNodesdis"></h3>
+	 </div>
+	<div class="fdiv" id="iddiv"><h1><a href="https://www.w3schools.com/jsref/prop_html_id.asp">id</a></h1>
+		<p>The id property sets or returns the id of an element (the value of an element's id attribute).</p>
+		<h5><big>syntex:- </big>HTMLElementObject.id <br><big>for set id :- </big>HTMLElementObject.id = id</h5>
+		<h4>
+			<xmp>
+				function idfun(){
+					var x=document.getElementsByTagName("*");
+					txt="";
+
+					for(var i=0; i<x.length;i++){
+						if(x[i].id==""){
+							continue
+						}
+						txt=txt+x[i].id+"<br>"
+					}
+
+					document.getElementById("iddis").innerHTML=txt;
+				}
+			</xmp>
+		</h4>
+		<script>
+			function idfun(){
+				var x=document.getElementsByTagName("*");
+				txt="<option>";
+
+				for(var i=0; i<x.length;i++){
+					if(x[i].id==""){
+						continue
+					}
+					txt=txt+x[i].id+"<option>"
+				}
+
+				document.getElementById("iddis").innerHTML=txt;
+			}
+		</script>
+		<button onclick="idfun()">id</button>
+		<h3 id="iddis"></h3>
+	 </div>
+	<div class="fdiv" id="insertAdjacentElementdiv"><h1><a href="https://www.w3schools.com/jsref/met_node_insertadjacentelement.asp">insertAdjacentElement()</a></h1>
+		<p>The insertAdjacentElement() method inserts a the specified element into a specified position. <br>Legal position values are: <br><br>
+			<big>"afterbegin"</big><br>
+			<big>"afterend"</big><br>
+			<big>"beforebegin"</big><br>
+			<big>"beforeend"</big>
+		</p>
+		<h5><big>syntex:- </big>node.insertAdjacentElement(position, element)</h5>
+		<h4>
+			<pre>
+				function insertAdjacentElementfun(){
+					var x=document.getElementById("<select name="insertAdjacentElementslt1" id="insertAdjacentElementslt1"></select>");
+					var y=document.getElementById("<select name="insertAdjacentElementslt2" id="insertAdjacentElementslt2"></select>");
+					y.insertAdjacentElement("<select name="insertAdjacentElementslt3" id="insertAdjacentElementslt3"><option>afterbegin</option><option>afterend</option><option>beforebegin</option><option>beforeend</option></select>", x);
+				}
+			</pre>
+		</h4>
+		<script>
+			function insertAdjacentElementfun(){
+				var a=document.getElementById("insertAdjacentElementslt1").value;
+				var b=document.getElementById("insertAdjacentElementslt2").value;
+				var c=document.getElementById("insertAdjacentElementslt3").value;
+
+				var x=document.getElementById(a);
+				var y=document.getElementById(b);
+				y.insertAdjacentElement(c, x);
+			}
+		</script>
+		<button onclick="insertAdjacentElementfun()">insertAdjacentElement()</button>
+		<h3 id="insertAdjacentElementdis"></h3>
+	 </div>
+	<div class="fdiv" id="insertAdjacentHTMLdiv"><h1><a href="https://www.w3schools.com/jsref/met_node_insertadjacenthtml.asp">insertAdjacentHTML</a></h1>
+		<p>The insertAdjacentHTML() method inserts a text as HTML, into a specified position.</p>
+		<h5><big>syntex:- </big>node.insertAdjacentHTML(position, text)</h5>
+		<h4>
+			<pre>
+				function insertAdjacentHTMLfun(){
+					var x=document.getElementById("<select name="insertAdjacentHTMLslt" id="insertAdjacentHTMLslt"></select>");
+					var p="/<//p>this is a pragraph /<//p>";
+					x.insertAdjacentHTML("<select name="insertAdjacentHTMLslt2" id="insertAdjacentHTMLslt2"><option>afterbegin</option><option>afterend</option><option>beforebegin</option><option>beforeend</option></select>" ,p);
+
+
+				}
+			</pre>
+		</h4>
+		<script>
+			function insertAdjacentHTMLfun(){
+				var a=document.getElementById("insertAdjacentHTMLslt").value;
+				var b=document.getElementById("insertAdjacentHTMLslt2").value;
+
+				var x=document.getElementById(a);
+				var p="<p style='color:red'>this is a pragraph </p>";
+				x.insertAdjacentHTML(b ,p);
+
+
+			}
+		</script>
+		<button onclick="insertAdjacentHTMLfun()">insertAdjacentHTML</button>
+		<h3 id="insertAdjacentHTMLdis"></h3>
+	 </div>
+	<div class="fdiv" id="insertAdjacentTextdiv"><h1><a href="https://www.w3schools.com/jsref/met_node_insertadjacenttext.asp">insertAdjacentText</a></h1>
+		<p>The insertAdjacentText() method inserts a the specified element into a specified position.</p>
+		<h5><big>syntex:- </big>node.insertAdjacentText(position, text)</h5>
+		<h4>
+			<pre>
+				function insertAdjacentTextfun(){
+					var x=document.getElementById("<select name="insertAdjacentTextslt" id="insertAdjacentTextslt"></select>");
+					var p="this is the txt "
+					x.insertAdjacentText("<select name="insertAdjacentTextslt2" id="insertAdjacentTextslt2"><option>afterbegin</option><option>afterend</option><option>beforebegin</option><option>beforeend</option></select>" ,p);
+
+				}
+			</pre>
+		</h4>
+		<script>
+			function insertAdjacentTextfun(){
+				var a=document.getElementById("insertAdjacentTextslt").value;
+				var b=document.getElementById("insertAdjacentTextslt2").value;
+
+				var x=document.getElementById(a);
+				var p=" this is the txt ";
+				x.insertAdjacentText(b ,p);
+
+			}
+		</script>
+		<button onclick="insertAdjacentTextfun()">insertAdjacentText</button>
+		<h3 id="insertAdjacentTextdis"></h3>
+	 </div>
+	<div class="fdiv" id="insertBeforediv"><h1><a href="https://www.w3schools.com/jsref/met_node_insertbefore.asp">insertBefore()</a></h1>
+		<p>The insertBefore() method inserts a node as a child, right before an existing child, which you specify.</p>
+		<h5><big>syntex:- </big>node.insertBefore(newnode, existingnode)</h5>
+		<h4>
+			<pre>
+				function insertBeforefun(){
+					var x = document.createTextNode("<input value="new val" type="text" id="insertBeforenpttxt">");
+					var y=document.createElement("<input value="li" type="text" id="insertBeforenptelement">");
+					var z = document.getElementById("<select name="insertbeforsletidnaem" id="insertbeforsletidnaem"></select>");
+					z.insertBefore(x, z.childNodes[<input style="width:40px;" type="number" value="1" id="insertbeforchildsnum">]);
+				}
+			</pre>
+		</h4>
+		<ul id="insertbeforul">
+			<li>masum</li>
+			<li>mahabur</li>
+			<li>monira</li>
+			<li>jim</li>
+			<li>lamia</li>
+		</ul>
+		<script>
+			function insertBeforefun(){
+				var a=document.getElementById("insertBeforenpttxt").value;
+				var b=document.getElementById("insertBeforenptelement").value;
+				var c=document.getElementById("insertbeforsletidnaem").value;
+				var d=document.getElementById("insertbeforchildsnum").value;
+				
+
+				var x = document.createTextNode(a);
+				var y=document.createElement(b);
+				y.appendChild(x)
+				var z = document.getElementById(c);
+				z.insertBefore(y, z.childNodes[d]);
+			}
+		</script>
+		<button onclick="insertBeforefun()">insertBefore()</button>
+		<h3 id="insertBeforedis"></h3>
+	 </div>
+	<div class="fdiv" id="isEqualNodediv" ><h1><a href="https://www.w3schools.com/jsref/met_node_isequalnode.asp">isEqualNode()</a></h1>
+		<p>The isEqualNode() method checks if two nodes are equal. </p><br>
+		<strong>Two nodes are equal if all the following conditions are true:</strong><br>
+		<ul >
+			<li>They have the same Node Type</li>
+			<li>They have the same nodeName, NodeValue, localName, nameSpaceURI and prefix</li>
+			<li>They have the same childNodes with all the descendants</li>
+			<li>They have the same attributes and attribute values (the attributes does not have be in the same order)</li>
+		</ul>
+		<ul contenteditable style="border:2px solid black;padding:10px; width:max-content; border-radius:10px;" id="ulf1">
+			<li>masum</li>
+			<li>mahabur</li>
+		</ul>
+		<ul contenteditable style="border:2px solid black;padding:10px; width:max-content; border-radius:10px;" id="ulf2">
+			<li>m</li>
+			<li>mhhh</li>
+		</ul>
+		<ul contenteditable style="border:2px solid black;padding:10px; width:max-content; border-radius:10px;" id="ulf3">
+			<li>masum</li>
+			<li>monira</li>
+		</ul>
+		
+		<h5><big>syntex:- </big>node.isEqualNode(node)</h5>
+		<h4>
+			<pre>
+				
+			</pre>
+		</h4>
+		<script>
+			function isEqualNodefun(){
+				var item1 = document.getElementById("ulf1").firstChild;
+				var item2 = document.getElementById("ulf2").firstChild;
+				var ans = item1.isEqualNode(item2);
+				
+				document.getElementById("isEqualNodedis").innerHTML=ans;
+
+			}
+			function isEqualNodefu2(){
+				var x=document.getElementById('ulf1').firstChild;
+				var y=document.getElementById('ulf2').firstChild;
+				var z=document.getElementById('ulf3').firstChild;
+				
+			document.getElementById("isEqualNodedis").innerHTML=ans;
+			}
+		</script>
+		<button onclick="isEqualNodefun()" ondblclick="isEqualNodefu2()">isEqualNode()</button>
+		<h3 id="isEqualNodedis"></h3>
+	 </div>
+	<div class="fdiv" id="isSameNodediv"><h1><a href="https://www.w3schools.com/jsref/met_node_issamenode.asp">isSameNode()</a></h1>
+		<p>The isSameNode() method checks if two nodes are the same node.</p>
+		<h5><big>syntex:- </big>node.isSameNode(node)</h5>
+		<script>
+			function isSameNodefun(){
+
+			}
+		</script>
+		<button onclick="isSameNodefun()">isSameNode()</button>
+		<h3 id="isSameNodedis"></h3>
+	 </div>
+	<div class="fdiv" id="lastChilddiv"><h1><a href="https://www.w3schools.com/jsref/prop_node_lastchild.asp">lastChild</a></h1>
+		<p>The lastChild property returns the last child node of the specified node, as a Node object.</p>
+		<h5><big>syntex:- </big>node.lastChild</h5>
+		<script>
+			function lastChildfun(){
+				var x=document.getElementById("ulf1").firstChild.innerHTML;
+				document.getElementById("lastChilddis").innerHTML=x;
+			}
+		</script>
+		<button onclick="lastChildfun()">lastChild</button>
+		<h3 id="lastChilddis">this is the display</h3>
+	 </div>
+	<div class="fdiv" id="lastElementChilddiv"><h1><a href="https://www.w3schools.com/jsref/prop_element_lastelementchild.asp">lastElementChild</a></h1>
+		<p>The lastElementChild property returns the last child element of the specified element.</p>
+		<h5><big>syntex:- </big>element.lastElementChild</h5>
+		<script>
+			function lastElementChildfun(){
+				var x=document.getElementById("lastElementChilddiv").lastElementChild.innerHTML;
+				document.getElementById("lastElementChilddis").innerHTML=document.getElementById("lastElementChilddis").innerHTML+"<br>" +x
+			}
+		</script>
+		<button onclick="lastElementChildfun()">lastElementChild</button>
+		<h3 id="lastElementChilddis">display</h3>
+	 </div>
+	<div class="fdiv" id="matchesdiv"><h1><a href="https://www.w3schools.com/jsref/met_element_matches.asp">matches()</a></h1>
+		<p>The matches() method returns a Boolean value indicating whether an element is matched by a specific CSS selector or not.</p>
+		<h5><big>syntex:- </big>element.matches(selectors)</h5>
+		<script>
+			function matchesfun(){
+				var x=document.getElementById("matchesdiv");
+				if(x.matches(".fidv")){
+					document.getElementById("matchesdis").innerHTML="this div has\".fdiv\" selector class  "
+				}
+				else{
+					document.getElementById("matchesdis").innerHTML="this div has no class of \".fdiv\" this  name  "
+				}
+			}
+		</script>
+		<button onclick="matchesfun()">matches()</button>
+		<h3 id="matchesdis">display</h3>
+	 </div>
+	<div class="fdiv" id="nextSiblingdiv"><h1><a href="https://www.w3schools.com/jsref/prop_node_nextsibling.asp">nextSibling()</a></h1>
+		<p>The nextSibling property returns the node immediately following the specified node, in the same tree level. </p>
+		<h5><big>syntex:- </big></h5>
+		<script>
+			function nextSiblingfun(){
+
+			}
+		</script>
+		<button onclick="nextSiblingfun()">nextSibling()</button>
+		<h3 id="dis">display</h3>
+	 </div>
+	<div class="fdiv" id="nodeNamediv"><h1><a href="https://www.w3schools.com/jsref/prop_node_nodename.asp">nodeName</a></h1>
+		<p></p>
+		<h5><big>syntex:- </big>node.nodeName</h5>
+		<h4>
+			<pre>
+				function nodeNamefun(){
+					var x=document.getElementById("nodeNamediv").nodeName;
+					document.getElementById("nodeNamedis").innerHTML=x;
+				}
+			</pre>
+		</h4>
+		<script>
+			function nodeNamefun(){
+				var x=document.getElementById("nodeNamediv").nodeName;
+				document.getElementById("nodeNamedis").innerHTML=x;
+			}
+			function nodeTypefun(){
+				var x=document.getElementById("nodeNamediv").nodeType;
+				document.getElementById("nodeNamedis").innerHTML=x;
+			}
+			function nodeValuefun(){
+				var x=document.getElementById("nodeNamediv").nodeValue;
+				document.getElementById("nodeNamedis").innerHTML=x;
+			}
+		</script>
+		<button onclick="nodeNamefun()">nodeName</button>
+		<button onclick="nodeTypefun()">nodeType</button>
+		<button onclick="nodeValuefun()">nodeValue</button>
+		<h3 id="nodeNamedis">display</h3>
+	 </div>
+	<div class="fdiv" id="normalizediv"><h1><a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_normalize">normalize()</a></h1>
+		<p>The normalize() method removes empty Text nodes, and joins adjacent Text nodes.</p>
+		<p id="normalizepid"> this is a new another pragraph <br></p>
+		<h5><big>syntex:- </big>node.normalize()</h5>
+		<script>
+			function addTextNodefun(){
+				var x=document.createTextNode("click me again. ");
+				var y=document.getElementById("normalizepid");
+				y.appendChild(x);
+				var x=document.getElementById("normalizespan");
+				x.innerHTML=y.childNodes.length;
+			}
+			function normParafun(){
+				var x=document.getElementById("normalizespan");
+				x.normalize();
+				var y=document.getElementById("normalizespan");
+				x.innerHTML=y.childNodes.length;
+			}
+		</script>
+		<button onclick="addTextNodefun()">Add a Text Node</button>
+		<button onclick="normParafun()">Normalize the paragraph</button>
+		<p>the pragraph has <span style="background-color:yellow;font-size:20px;margin:5px;padding:10px;" id="normalizespan">1</span>appendchild</p>
+		<h3 id="normalizedis">display</h3>
+	 </div>
+	<div class="fdiv" id="offsetHeightdiv"onmouseover="offsetHeightfun()" ><h1><a href="https://www.w3schools.com/jsref/prop_element_offsetheight.asp">offsetHeight</a></h1>
+		<p></p>
+		<h5><big>syntex:- </big></h5>
+		<h4>
+			<pre>
+				function offsetHeightfun(){
+					var x=document.getElementById("<select name="offsetHeightslt" id="offsetHeightslt"></select>");
+					var height=x.offsetHeight +"px";
+					var width=x.offsetWidth +"px";
+					var left=x.offsetLeft +"px";
+
+				}
+			</pre>
+		</h4>
+		<script>
+			
+			function offsetHeightfun(){
+				var a=document.getElementById("offsetHeightslt").value;
+
+
+				var x=document.getElementById(a);
+				var height=x.offsetHeight +"px";
+				var width=x.offsetWidth +"px";
+				var left=x.offsetLeft +"px";
+				var top=x.offsetTop +"px";
+				document.getElementById("offsetHeightdis").innerHTML="this devise height is  "+height+"<br>"+"this devise width is  "+width+"<br>this divese left is "+left+"<br>this divese offset top is is "+top;
+			}
+		</script>
+		<button onclick="offsetHeightfun()">offsetHeight</button>
+		<button onclick="offsetHeightsltfun()">slect</button>
+		<h3 id="offsetHeightdis">display</h3>
+	 </div>
+	<div class="fdiv" id="scrollHeightdiv"><h1><a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_scrollheight3">scrollHeight </a></h1>
+		<p>The scrollHeight property returns the entire height of an element in pixels, including padding, but not the border, scrollbar or margin.</p>
+		<h5><big>syntex:- </big>element.scrollHeight</h5>
+		<script>
+			function scrollHeightfun(){
+				var x=document.getElementById("shmd");
+				var y=x.scrollHeight;
+				var z=x.scrollWidth;
+				x.innerHTML="Height: " + y + "px<br>Width: " + z + "px";
+			}
+		</script>
+		<div id="shdiv">
+			<div id="shmd">
+				
+			</div>
+		</div>
+		<button onclick="scrollHeightfun()">scrollHeight </button>
+		<h3 id="scrollHeightdis">display</h3>
+	 </div>
+	<div class="fdiv" id="parentNodediv"><h1><a href="https://www.w3schools.com/jsref/prop_node_parentnode.asp">parentNode</a></h1>
+		<p>The parentNode property returns the parent node of the specified node, as a Node object.</p>
+		<h5><big>syntex:- </big></h5>
+		<h4>
+			<pre>
+				function parentNodefun(){
+					var x=document.getElementById("<select name="parentNodeslt" id="parentNodeslt"></select>").parentNode.nodeName;
+					document.getElementById("parentNodedis").innerHTML=x;
+				}
+			</pre>
+		</h4>
+		<script>
+			function parentNodefun(){
+				var a=document.getElementById("parentNodeslt").value
+				var x=document.getElementById(a).parentNode.nodeName;
+				document.getElementById("parentNodedis").innerHTML=x;
+			}
+		</script>
+		<button onclick="parentNodefun()">parentNode</button>
+		<h3 id="parentNodedis">display</h3>
+	 </div>
+	<div class="fdiv" id="querySelectordiv"><h1><a href="https://www.w3schools.com/jsref/met_element_queryselector.asp">querySelector()</a></h1>
+		<p>The querySelector() method returns the first child element that matches a specified CSS selector(s) of an element.</p>
+		<h5><big>syntex:- </big>element.querySelector(CSS selectors)</h5>
+		<h4>
+			<pre>
+				function querySelectorfun(){
+					var x=document.getElementById("querySelectordiv");
+					x.querySelector("#querySelectordis,button").style.backgroundColor="red";
+				}
+			</pre>
+		</h4>
+		<script>
+			function querySelectorfun(){
+				var x=document.getElementById("querySelectordiv");
+				x.querySelector("#querySelectordis,button").style.backgroundColor="red";
+			}
+		</script>
+		<button onclick="querySelectorfun()">querySelector()</button>
+		<h3 id="querySelectordis">display</h3>
+	 </div>
+	<div class="fdiv" id="querySelectorAlldiv"><h1><a href="https://www.w3schools.com/jsref/met_element_queryselectorall.asp">querySelectorAll()</a></h1>
+		<p>The querySelectorAll() method returns a collection of an element's child elements that match a specified CSS selector(s), as a static NodeList object.</p>
+		<h5><big>syntex:- </big>element.querySelectorAll(CSS selectors)</h5>
+		<h4>
+			<pre>
+				function querySelectorAllfun(){
+				var x=document.getElementById("<select name="querySelectorAllslt" id="querySelectorAllslt"></select>").querySelectorAll("p,h5,h3");
+				for(var i=0;i< x.length;i++){
+					x[i].style.backgroundColor="red";
+				}
+			}
+			</pre>
+		</h4>
+		<script>
+			function querySelectorAllfun(){
+				var a=document.getElementById("querySelectorAllslt").value;
+				var x=document.getElementById(a).querySelectorAll("p,h5,h3");
+				for(var i=0;i<x.length;i++){
+					x[i].style.backgroundColor="red";
+				}
+			}
+		</script>
+		<button onclick="querySelectorAllfun()">querySelectorAll()</button>
+		<h3 id="querySelectorAlldis">display</h3>
+	 </div>
+	<div class="fdiv" id="removediv"><h1><a href="https://www.w3schools.com/jsref/met_element_remove.asp">remove()</a></h1>
+		<p>The remove() method removes the specified element from the DOM.</p>
+		<h5><big>syntex:- </big>node.remove()</h5>
+		<h4>
+			<pre>
+				function removefun(){
+					var x=document.getElementById("<select name="removeslt" id="removeslt"></select>");
+					x.remove();
+				}
+			</pre>
+		</h4>
+		<script>
+			function removefun(){
+				var a=document.getElementById("removeslt").value
+				var x=document.getElementById(a);
+				x.remove();
+			}
+		</script>
+		<button onclick="removefun()">remove()</button>
+		<h3 id="removedis">display</h3>
+	 </div>
+	<div class="fdiv" id="removeAttributediv"><h1><a href="https://www.w3schools.com/jsref/met_element_removeattribute.asp">removeAttribute()</a></h1>
+		<p>The removeAttribute() method removes the specified attribute from an element.</p>
+		<h5><big>syntex:- </big>element.removeAttribute(attributename)</h5>
+		<h4>
+			<pre>
+				function removeAttributefun(){
+					var x=document.getElementById("<select onchange="newfunforremove()" name="removeAttributeslt1" id="removeAttributeslt1"></select>");
+					x.removeAttribute("<select name="removeAttributeslt2" id="removeAttributeslt2"></select>")
+				}
+			</pre>
+		</h4>
+		<script>
+			
+			function newfunforremove(){
+
+				var b=document.getElementById("removeAttributeslt1").value;
+				var x=document.getElementById(b);
+				var txt2="<option>";
+				for(var i=0;i<x.attributes.length;i++){
+					txt2=txt2+x.attributes[i].name+"<option>";
+				}
+				document.getElementById("removeAttributeslt2").innerHTML=txt2;
+				x.style.backgroundColor="red"
+			}
+			function removeAttributefun(){
+				var a=document.getElementById("removeAttributeslt2").value;
+				var b=document.getElementById("removeAttributeslt1").value;
+
+				var x=document.getElementById("removeAttributediv");
+				x.removeAttribute(a)
+			}
+		</script>
+		<button onclick="removeAttributefun()">removeAttribute()</button>
+		<h3 id="removeAttributedis">display</h3>
+	 </div>
+	<div class="fdiv" id="removeChilddiv"><h1><a href="https://www.w3schools.com/jsref/met_node_removechild.asp">removeChild()</a></h1>
+		<p>The removeChild() method removes a specified child node of the specified element.</p>
+		<h5><big>syntex:- </big>node.removeChild(node)</h5>
+		<h4>
+			<pre>
+				function removeChildfun(){
+					var list=document.getElementById(" <select name="removeChildslt" id="removeChildslt"></select>");
+					list.removeChild(list.childNodes[list.childNodes.length-1])
+
+				}
+			</pre>
+		</h4>
+		<script>
+			function removeChildfun(){
+				var a=document.getElementById("removeChildslt").value;
+				var list=document.getElementById(a);
+				list.removeChild(list.childNodes[list.childNodes.length-1])
+
+			}
+		</script>
+		<button onclick="removeChildfun()">removeChild()</button>
+		<h3 id="removeChilddis">display</h3>
+	 </div>
+	<div class="fdiv" id="removeEventListenerdiv"><h1><a href="https://www.w3schools.com/jsref/met_node_removechild.asp">removeEventListener()</a></h1>
+		<p>The removeEventListener() method removes an event handler that has been attached with the <a href="https://www.w3schools.com/jsref/met_element_addeventlistener.asp">removeEventListener()</a> method.</p>
+		<h5><big>syntex:- </big>element.removeEventListener(event, function, useCapture)</h5>
+		<h4>
+			<pre>
+				function addfun(){
+					document.getElementById("removeEventListenerdiv").addEventListener("mousemove", myFunction);
+				}
+				function myFunction(){
+					document.getElementById("removeEventListenerdis").innerHTML = Math.random();
+
+				}
+				function removeEventListenerfun(){
+					document.getElementById("removeEventListenerdiv").removeEventListener("mousemove", myFunction);
+				}
+			</pre>
+		</h4>
+		<script>
+			function addfun(){
+				document.getElementById("removeEventListenerdiv").addEventListener("mousemove", myFunction);
+			}
+			function myFunction(){
+				document.getElementById("removeEventListenerdis").innerHTML = Math.random();
+				
+			}
+			function removeEventListenerfun(){
+				document.getElementById("removeEventListenerdiv").removeEventListener("mousemove", myFunction);
+			}
+		</script>
+		<button onclick="addfun()">addeventlistner()</button>
+		<button onclick="removeEventListenerfun()">removeEventListener()</button>
+		<h3 id="removeEventListenerdis">display</h3>
+	 </div>
+	<div class="fdiv" id="replaceChilddiv"><h1><a href="https://www.w3schools.com/jsref/met_node_replacechild.asp">replaceChild()</a></h1>
+		<p>The replaceChild() method replaces a child node with a new node. <br>The new node could be an existing node in the document, or you can create a new node.</p>
+		<h5><big>syntex:- </big>node.replaceChild(newnode, oldnode)</h5>
+		<h4>
+			<pre>
+				function replaceChildfun() {
+					var textnode = document.createTextNode("Water");
+					var item = document.getElementById("ndivvv");
+					item.replaceChild(textnode, item.childNodes[0]);
+				}
+			</pre>
+		</h4>
+		<script>
+			function replaceChildfun() {
+				var textnode = document.createTextNode("Water");
+				var item = document.getElementById("ndivvv");
+				item.replaceChild(textnode, item.childNodes[0]);
+			}
+		</script>
+		<button onclick="replaceChildfun()">replaceChild()</button>
+		<div id="ndivvv"><h1><a href="#">maum</a></h1>
+
+
+		</div>
+		<h3 id="replaceChilddis">display <h4>mahabur</h4></h3>
+	 </div>
+	<div class="fdiv" id="requestFullscreendiv"><h1><a href="">requestFullscreen()</a></h1>
+		<p></p>
+		<h5><big>syntex:- </big>HTMLElementObject.requestFullscreen()</h5>
+		<h4>
+			<pre>
+				function requestFullscreenfun(){
+					var x=document.getElementById("requestFullscreendiv");
+
+					x.requestFullscreen();
+					x.webkitRequestFullscreen();
+					x.msRequestFullscreen();
+
+				}
+				function exitFullscreenfun(){
+					var x=document.getElementById("requestFullscreendiv");
+
+					x.exitFullscreen();
+					
+
+				}
+			</pre>
+		</h4>
+		<script>
+			function requestFullscreenfun(){
+				var x=document.getElementById("requestFullscreendiv");
+
+					x.requestFullscreen();
+					x.webkitRequestFullscreen();
+					x.msRequestFullscreen();
+				
+			}
+			function exitFullscreenfun(){
+				var x=document.getElementById("requestFullscreendiv");
+
+					x.exitFullscreen();
+					
+				
+			}
+		</script>
+		<button onclick="requestFullscreenfun()">requestFullscreen()</button>
+		<button onclick="exitFullscreenfun()">requestFullscreen()</button>
+		<h3 id="requestFullscreendis">display</h3>
+	 </div>
+	<div class="fdiv" id="scrollIntoViewdiv"><h1><a href="https://www.w3schools.com/jsref/met_element_scrollintoview.asp">scrollIntoView()</a></h1>
+		<p>The scrollIntoView() method scrolls the specified element into the visible area of the browser window.</p>
+		<h5><big>syntex:- </big>element.scrollIntoView(alignTo)</h5>
+		<h4>
+			<pre>
+				function setAttributefun(){
+					var x=document.getElementById("setAttributedis");
+					x.setAttribute("class","ncls");
+				}
+			</pre>
+		</h4>
+		<script>
+			function scrollIntoViewfun(){
+				
+			}
+		</script>
+		<button onclick="scrollIntoViewfun()">scrollIntoView()</button>
+		<h3 id="scrollIntoViewdis">display</h3>
+	 </div>
+	<div class="fdiv" id="scrollLeftdiv"><h1><a href="https://www.w3schools.com/jsref/prop_element_scrollleft.asp">scrollLeft</a></h1>
+		<p>The scrollLeft property sets or returns the number of pixels an element's content is scrolled horizontally. <br>The scrollTop property sets or returns
+		 the number of pixels an element's content is scrolled vertically.</p>
+		<h5><big>syntex:- </big>element.scrollLeft <br><big>to set</big>element.scrollLeft = pixels</h5>
+		<h4>
+			<pre>
+				function scrollLeftfun(){
+					var x=document.getElementById("sldiv");
+					var y=x.scrollLeft;
+					var z=x.scrollTop;
+					document.getElementById("scrollLeftdis").innerHTML="Horizontally: " + y + "px<br>Vertically: " + z + "px";
+				}
+			</pre>
+		</h4>
+		<script>
+			function scrollLeftfun(){
+				var x=document.getElementById("sldiv");
+				var y=x.scrollLeft;
+				var z=x.scrollTop;
+				document.getElementById("scrollLeftdis").innerHTML="Horizontally: " + y + "px<br>Vertically: " + z + "px";
+			}
+		</script>
+		<button onclick="scrollLeftfun()">scrollLeft</button>
+
+		<div id="sldiv" onscroll="scrollLeftfun()">
+			<div id="slmdiv">
+				
+			</div>
+		</div>
+		<h3 id="scrollLeftdis">display</h3>
+	 </div>
+	<div class="fdiv" id="setAttributediv"><h1><a href="https://www.w3schools.com/jsref/met_element_setattribute.asp">setAttribut()</a></h1>
+		<p>The setAttribute() method adds the specified attribute to an element, and gives it the specified value.</p>
+		<h5><big>syntex:- </big>element.setAttribute(attributename, attributevalue)</h5>
+		<h4>
+			<pre>
+				function setAttributefun(){
+					var x=document.getElementById(" <select name="setAttributedisslt" id="setAttributedisslt"></select>");
+					x.setAttribute("<input class="cdnpt" id="setattrnpt1" value="class" type="text">","<input class="cdnpt" id="setattrnpt2" value="ncls" type="text">");
+				}
+			</pre>
+		</h4>
+		<script>
+			function setAttributefun(){
+				var a=document.getElementById("setAttributedisslt").value;
+				var b=document.getElementById("setattrnpt1").value;
+				var c=document.getElementById("setattrnpt2").value;
+				var x=document.getElementById(a);
+				x.setAttribute(b,c);
+			}
+		</script>
+		<button onclick="setAttributefun()">setAttribute()</button>
+		<h3 id="setAttributedis">display</h3>
+	 </div>
+	<div class="fdiv" id="setAttributeNodediv"><h1><a href="https://www.w3schools.com/jsref/met_element_setattributenode.asp">setAttributeNode()</a></h1>
+		<p>The setAttributeNode() method adds the specified attribute node to an element. <br>If the specified attribute already exists, this method replaces it.</p>
+		<h5><big>syntex:- </big>element.setAttributeNode(attributenode)</h5>
+		<h4>
+			<pre>
+				function setAttributeNodefun(){
+					var attr=document.createAttribute("class");
+					attr.value="ncls";
+					var a=document.getElementById("setAttributeNodediv");
+					var h=a.document.getElementsByTagName("*")[0];
+					a.setAttributeNode("attr");
+				}
+
+			</pre>
+		</h4>
+		<script>
+			function setAttributeNodefun(){
+				var x = document.createAttribute("class");
+				x.value = "ncls";
+				var h = document.getElementById("bbbtn");
+				h.setAttributeNode(x); 
+			}
+
+		</script>
+		<button id="bbbtn" onclick="setAttributeNodefun()">setAttributeNode()</button>
+		<h3 id="setAttributeNodedis">display</h3>
+	 </div>
+	<div class="fdiv" onclick="tagNamefun2(event)" id="tagNamediv"><h1><a href="https://www.w3schools.com/jsref/prop_element_tagname.asp">tagName</a></h1>
+		<p>The tagName property returns the tag name of the element.</p>
+		<h5><big>syntex:- </big>element.tagName</h5>
+		<h4>
+			<pre>
+				function tagNamefun(){
+					var x=document.getElementById("tagNamediv");
+					var y=x.getElementsByTagName("*");
+					var txt="";
+					for(var i=0;i y.length;i++){
+						txt+=y[i].tagName+" br>"
+					}
+					document.getElementById("tagNamedis").innerHTML=txt;
+				}
+			</pre>
+		</h4>
+		<script>
+			function tagNamefun2(event){
+				var x=event.target;
+				document.getElementById("tagNamedis2").innerHTML="Triggered by a " + x.tagName + " element";
+
+			}
+			
+			function tagNamefun(){
+				var x=document.getElementById("tagNamediv");
+				var y=x.getElementsByTagName("*");
+				var txt="";
+				for(var i=0;i<y.length;i++){
+					txt+=y[i].tagName+"<br>"
+				}
+				document.getElementById("tagNamedis").innerHTML=txt;
+			}
+		</script>
+		<button onclick="tagNamefun()">tagName</button>
+		<h3 id="tagNamedis">display</h3>
+		<h3 id="tagNamedis2">display</h3>
+	 </div>
+
+</body>
+</html>
+	
